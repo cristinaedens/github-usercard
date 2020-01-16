@@ -7,11 +7,11 @@
 
 const cards = document.querySelector(".cards");
 axios.get('https://api.github.com/users/cristinaedens')
-    .then((results) => {
+    .then((response) => {
 
-        const newcard = createCard(results.data);
+        const newCard = createCard(response.data);
 
-        cards.append(newcard);
+        cards.append(newCard);
 
     })
     .catch((error) => {
